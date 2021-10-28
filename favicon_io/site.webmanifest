@@ -1,11 +1,6 @@
 {
-    "name": "dua.josua",
+    "name": "dua.josuamanullang",
     "short_name": "dua",
-    "star_url":".",
-    "display":"standalone",
-    "background-color":"#212121",
-    "theme_color": "#212121",
-    "description":"Josua Second Project As A Software Developer.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -17,5 +12,8 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ]
+    ],
+    "theme_color": "#f59f00",
+    "background_color": "#000000",
+    "display": "standalone"
 }
