@@ -8,7 +8,7 @@ const header = () => {
                   <div class="head-logo">
                         <img class="head-logo-image"
                              src="favicon_io/android-chrome-192x192.png"
-                             alt="04.empat">
+                             alt="02.dua">
                         <h1 class="head-logo-label">dua</h1>
                   </div>
             </header>
