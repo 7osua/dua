@@ -1,5 +1,65 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 47rem;
+    width: 80%;
+    margin: 0 auto;
     box-sizing: border-box;
+    display: block;
     background-color: #000000;
-    color: #ced4da;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.25rem;
+}
+
+.head-logo {
+    margin: 1rem auto;
+    max-width: 60%;
+}
+
+.head-logo-label {
+    font-family: 'Press Start 2P', cursive;
+    color: #f59f00;
+}
+
+@supports (display: flex) {
+    .head-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head-logo-image {
+        display: block;
+        width: 4rem;
+    }
+
+    .head-logo-label {
+        font-size: 2rem;
+        padding-left: 8px;
+    }
+
+    @media (min-width: 48rem) {
+
+        .head-logo {
+            margin: 4rem auto;
+            max-width: 80%;
+        }
+
+        .head-logo-image {
+            display: block;
+            width: 8rem;
+        }
+
+        .head-logo-label {
+            font-size: 4rem;
+            padding-left: 24px;
+        }
+    }
 }
