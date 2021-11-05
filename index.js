@@ -1,8 +1,34 @@
 const root = document.getElementById('root');
 
-const header = () => {
-    root.insertAdjacentHTML(
-        'beforebegin',
+const createTopAppBar = function () {
+    document.body.insertAdjacentHTML(
+        'beforeend',
+        `
+            <nav class="top-app-bar">
+                <div class="top-app-bar-row">
+                    <section class="top-app-bar-row__section">
+                        <button class="top-app-bar-row__icon-button">
+                            <span class="material-icons-round">
+                                menu
+                            </span>
+                        </button>
+                    </section>
+                    <section class="top-app-bar-row__section">
+                        <button class="top-app-bar-row__icon-button">
+                            <span class="material-icons-round">
+                                download
+                            </span>
+                        </button>
+                    </section>
+                </div>
+            </nav>
+        `,
+    );
+};
+
+const createHeader = function () {
+    document.body.insertAdjacentHTML(
+        'beforeend',
         `
             <header class="head">
                   <div class="head-logo">
@@ -17,7 +43,11 @@ const header = () => {
 };
 
 const initPage = () => {
-    header();
+    createTopAppBar();
+    createHeader();
 };
 
 window.onload = initPage();
+
+const nav = document.body.getElementsByTagName('nav').item(0);
+console.log(nav);

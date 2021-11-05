@@ -1,21 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
 html,
 body {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 body {
-    max-width: 47rem;
-    width: 80%;
-    margin: 0 auto;
     box-sizing: border-box;
-    display: block;
     background-color: #000000;
-    color: #ffffff;
+    color: #f8f9fa;
     text-decoration: none;
     line-height: 1.25rem;
+}
+
+.top-app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 3rem;
+    background-color: #212529;
+    border: none;
+    border-radius: 0 0 16px 0;
+}
+
+.top-app-bar-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top-app-bar-row__icon-button {
+    background-color: #212529;
+    outline-style: none;
+    border: none;
+}
+
+.material-icons-round {
+    color: #f8f9fa;
+}
+
+.head {
+    max-width: 47rem;
+    margin: 4rem auto 0;
+    display: block;
 }
 
 .head-logo {
@@ -46,7 +78,6 @@ body {
     }
 
     @media (min-width: 48rem) {
-
         .head-logo {
             margin: 4rem auto;
             max-width: 80%;
