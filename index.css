@@ -16,7 +16,38 @@ body {
     line-height: 1.25rem;
 }
 
+.backdrop, .drawer{
+    position: fixed;
+    display: none;
+    width:100%;
+    transform: translateY(100%);
+    transition: ease-out 200ms;
+    bottom:0;
+    left:0;
+}
+
+.backdrop{
+    z-index: 2;
+    height:100%;
+    background-color: rgb(33, 37, 41, 0.5);
+}
+
+.drawer{
+    z-index: 3;
+    height: 80%;
+    background-color: #212529;
+    border:none;
+    border-radius: 16px 16px 0 0;
+}
+
+.open{
+    display: block;
+    transform: translateY(0);
+    transition: ease-in 200ms;
+}
+
 .top-app-bar {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,19 +60,30 @@ body {
 
 .top-app-bar-row {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
+.top-app-bar__section{
+    width:100%;
+    height: 100%;
+}
+
 .top-app-bar-row__icon-button {
     background-color: #212529;
+    width: 1.5rem;
+    height: 1.5em;
     outline-style: none;
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .material-icons-round {
     color: #f8f9fa;
+    width: 100%;
 }
 
 .head {
