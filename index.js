@@ -40,6 +40,15 @@ const createButtomNavigation = function () {
         'afterbegin',
         `
             <nav class="drawer">
+                <div class="menu">
+                    <ul class="list">
+                        <li class="list-item">Button</li>
+                        <li class="list-item">Card</li>
+                        <li class="list-item">Check Box</li>
+                        <li class="list-item">Chips</li>
+                        <li class="list-item">Data Table</li>
+                    </ul>
+                </div>
             </nav>
         `,
     );
