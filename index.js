@@ -41,12 +41,13 @@ const createButtomNavigation = function () {
         `
             <nav class="drawer">
                 <div class="menu">
-                    <ul class="list">
-                        <li class="list-item">Button</li>
-                        <li class="list-item">Card</li>
-                        <li class="list-item">Check Box</li>
-                        <li class="list-item">Chips</li>
-                        <li class="list-item">Data Table</li>
+                    <ul class="contents">
+                        <li class="content">Home</li>
+                        <li class="content">Button</li>
+                        <li class="content">Card</li>
+                        <li class="content">Check Box</li>
+                        <li class="content">Chips</li>
+                        <li class="content">Data Table</li>
                     </ul>
                 </div>
             </nav>

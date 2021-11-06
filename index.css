@@ -40,6 +40,24 @@ body {
     border-radius: 16px 16px 0 0;
 }
 
+.menu{
+    display:block;
+    height: 100%;
+    padding:1rem;
+    margin:0;
+}
+
+.contents{
+    list-style: none;
+    width:100%;
+    padding: 0;
+    margin: 0;
+}
+
+.content{
+    line-height: 3rem;
+}
+
 .open{
     display: block;
     transform: translateY(0);
