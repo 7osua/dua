@@ -1,7 +1,7 @@
 const root = document.getElementById('root');
 
 const createTopAppBar = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'beforeend',
         `
             <div class="top-app-bar">
@@ -27,7 +27,7 @@ const createTopAppBar = function () {
 };
 
 const createBackdrop = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'afterbegin',
         `
             <div class="backdrop"></div>
@@ -36,18 +36,17 @@ const createBackdrop = function () {
 };
 
 const createButtomNavigation = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'afterbegin',
         `
             <nav class="drawer">
                 <div class="menu">
                     <ul class="contents">
-                        <li class="content">Home</li>
-                        <li class="content">Button</li>
-                        <li class="content">Card</li>
-                        <li class="content">Check Box</li>
-                        <li class="content">Chips</li>
-                        <li class="content">Data Table</li>
+                        <li class="content"><a>Button</a></li>
+                        <li class="content"><a>Card</a></li>
+                        <li class="content"><a>Check Box</a></li>
+                        <li class="content"><a>Chips</a></li>
+                        <li class="content"><a>Data Table</a></li>
                     </ul>
                 </div>
             </nav>
@@ -56,7 +55,7 @@ const createButtomNavigation = function () {
 };
 
 const createHeader = function () {
-    document.body.insertAdjacentHTML(
+    root.insertAdjacentHTML(
         'beforeend',
         `
             <header class="head">
@@ -71,39 +70,57 @@ const createHeader = function () {
     );
 };
 
+const createContent = function () {
+    root.insertAdjacentHTML(
+        'beforeend',
+        `
+            <main>
+                <section id="introduction">
+                    <h1 id="introduction-title">
+                        UI Component With HTML, CSS, JavaScript
+                    </h1>
+                    <p class="introduction-description">
+                        Hello, welcome to my second project (two).
+                        This website is a practical implementation
+                        from what I already know. 
+                        I've made it this far, 
+                        because I prefare the "trial and error" way.
+                        This project only aims to sharpen three
+                        basic knowledge (HTML, CSS, JavaScript) and various
+                        design concept from <i>Material Design</i>.
+                    </p>
+                    <p class="introduction-description">
+                        With this project I want to know more about how HTML, 
+                        CSS, and JavaScript work together.
+                        The role of HTML as defining the structure of the content on the page,
+                        CSS which plays a role in giving a better appearance to HTML, 
+                        and JavaScript adds functionality to make it more interactive.
+                    </p>
+                </section>
+            </main>
+        `,
+    );
+};
+
 const initPage = () => {
     createButtomNavigation();
     createBackdrop();
     createTopAppBar();
     createHeader();
+    createContent();
 };
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('servWork.js')
+        .then((registration) => {
+            console.log('Service Worker Registered !');
+            console.log(registration);
+        })
+        .catch((error) => {
+            console.log('Sevice Worker Registration Failed !');
+            console.log(error);
+        });
+}
 
 window.onload = initPage();
-
-const appBar = document.body.getElementsByTagName('nav').item(0);
-const appBarButton = document.getElementById('top-app-bar__button');
-const backdrop = document.querySelector('.backdrop');
-const drawer = document.querySelector('.drawer');
-
-const showBackdrop = function () {
-    backdrop.classList.toggle('open');
-    backdrop.style.display = 'block';
-};
-
-const showDrawer = function () {
-    drawer.classList.toggle('open');
-    drawer.style.display = 'block';
-};
-
-const showButtomNavigation = function () {
-    showBackdrop();
-    showDrawer();
-};
-
-appBarButton.addEventListener('click', showButtomNavigation);
-backdrop.addEventListener('click', function () {
-    drawer.classList.remove('open');
-    drawer.style.display = 'none';
-    backdrop.classList.remove('open');
-    backdrop.style.display = 'none';
-});

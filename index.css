@@ -10,20 +10,32 @@ body {
 
 body {
     box-sizing: border-box;
-    background-color: #000000;
-    color: #f8f9fa;
+    background-color: #343a40;
+    color: #ced4da;
     text-decoration: none;
     line-height: 1.25rem;
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+#root {
+    margin: 0 1rem;
 }
 
 .backdrop,
 .drawer {
     position: fixed;
-    display: none;
     width: 100%;
     transform: translateY(100%);
-    transition: ease-out 200ms;
+    transition: transform ease-out 200ms;
     bottom: 0;
     left: 0;
 }
@@ -60,10 +72,22 @@ body {
     line-height: 3rem;
 }
 
+.content > a {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+    .content > a {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
 .open {
     display: block;
     transform: translateY(0);
-    transition: ease-in 200ms;
+    transition: transform ease-in 200ms;
 }
 
 .top-app-bar {
@@ -120,6 +144,7 @@ body {
 .head-logo-label {
     font-family: 'Press Start 2P', cursive;
     color: #f59f00;
+    text-shadow: 4px 4px 1px #212529;
 }
 
 @supports (display: flex) {
@@ -131,17 +156,17 @@ body {
 
     .head-logo-image {
         display: block;
-        width: 4rem;
+        width: 3rem;
     }
 
     .head-logo-label {
-        font-size: 2rem;
-        padding-left: 8px;
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
     }
 
     @media (min-width: 48rem) {
         .head-logo {
-            margin: 4rem auto;
+            margin: 3rem auto;
             max-width: 80%;
         }
 
@@ -153,6 +178,35 @@ body {
         .head-logo-label {
             font-size: 4rem;
             padding-left: 24px;
+            text-shadow: 8px 8px 1px #212529;
         }
+    }
+}
+
+#introduction {
+    max-width: 47rem;
+    margin: 0 auto;
+}
+
+#introduction-title {
+    font-size: 1rem;
+    margin: 0 0 1rem;
+}
+
+.introduction-description {
+    font-size: 0.75rem;
+    margin: 0 0 0.75rem;
+}
+
+@media (min-width: 48rem) {
+    #introduction-title {
+        line-height: 2rem;
+        font-size: 2rem;
+        margin: 0 0 2rem;
+    }
+
+    .introduction-description {
+        font-size: 1rem;
+        margin: 0 0 1rem;
     }
 }
