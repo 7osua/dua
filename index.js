@@ -93,7 +93,6 @@ const createContent = function () {
                         With this project I want to know more about how HTML, 
                         CSS, and JavaScript work together.
                         The role of HTML as defining the structure of the content on the page,
-                        CSS which plays a role in giving a better appearance to HTML, 
                         and JavaScript adds functionality to make it more interactive.
                     </p>
                 </section>
